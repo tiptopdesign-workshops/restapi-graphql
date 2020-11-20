@@ -3,15 +3,18 @@ module.exports = `
         hello(name: String!): String!
         allPost: [Post!]!
         post(postId: Int!): Post
-        news: [News]
+        getNews: [News]
+        news(title: String!): [News]
     }
 
     type Mutation {
         addPost(title: String!, body: String): Post!
+        addNews(title: String!, summary: String): News
     }
 
     type Subscription {
         counter: Int!
+        news: News
     }
 
     type News {

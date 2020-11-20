@@ -5,7 +5,7 @@ const resolvers = require('./graphql/resolver');
 const typeDefs = require('./graphql/schema');
 const posts = require('./data.json');
 
-mongoose.connect('mongodb+srv://developer:developer@hihenry-searchable-api.tljxf.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect("");
 const pubsub = new PubSub();
 const server = new GraphQLServer({ typeDefs, resolvers, context: { pubsub } });
 
